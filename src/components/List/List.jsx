@@ -1,11 +1,17 @@
+import * as S from './styled'
 
 export const List = (props) => {
 
   return (
-    <ul>
+    <S.Ul>
       {props.itemsList.map((item, index) => (
-        <li key={index}>{item}</li>
+        <li key={index}>
+          <input type="checkbox" id="checkBox" />
+          {item}
+          <button type='button'>Delete</button>
+          <span></span>
+        </li>
       ))}
-    </ul>
+    </S.Ul>
   )
 }
