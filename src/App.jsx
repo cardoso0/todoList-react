@@ -17,9 +17,7 @@ function App() {
       <h1>todos</h1>
       
       <Form 
-        onAddItem={handleAddItemToList} 
-        color='blue'
-        name='Felipe'
+        onAddItem={handleAddItemToList}
       />
 
       <List itemsList={itemsList} /> {/* passando o `itemList` como props para o componente */}
