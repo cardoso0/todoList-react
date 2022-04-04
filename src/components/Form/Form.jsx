@@ -3,7 +3,7 @@ import * as S from './styled'
 
 export const Form = ({ onAddItem }) => {
 
-  const [task, setTask] = useState("")
+  const [task, setTask] = useState('')
 
   const handleChangeInput = event => {
     let inputTask = event.target.value
@@ -34,7 +34,10 @@ export const Form = ({ onAddItem }) => {
         onChange={handleChangeInput}
         value={task}
       />
-      <button type='submit' onClick={handleAddItemToList} className='input-submit'>Enviar</button>
+      <button 
+        type='submit' 
+        onClick={handleAddItemToList} 
+        className='input-submit'>Enviar</button>
     </S.Form>
   )
 }

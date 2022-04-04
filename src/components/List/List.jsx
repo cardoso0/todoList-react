@@ -9,13 +9,17 @@ export const List = (props) => {
     setCheck(checkedValue)
   }
 
+  const removeTask = (e) => {
+    console.log(e.target)
+  }
+
   return (
     <S.Ul>
       {props.itemsList.map((item, index) => (
-        <li key={index}>
+        <li key={item.id}>
           <input type="checkbox" id="checkBox" onChange={handleCheckBox}/>
-          <S.Span estilo={check}>{item}</S.Span>
-          <button type='button'>Delete</button>
+          <S.Span estilo={check}>{item.name}</S.Span>
+          <button type='button' onClick={removeTask}>Delete</button>
         </li>
       ))}
     </S.Ul>
