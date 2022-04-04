@@ -26,3 +26,11 @@ export const Ul = styled.ul`
     }
   }
 `
+
+export const Span = styled.span`
+  font-style: ${props => props.estilo ? 'italic' : 'none'};
+  color: ${props => props.estilo ? 'rgb(89, 89, 89)' : 'none'};
+  opacity: ${props => props.estilo ? '0.5' : 'none'};
+  text-decoration: ${props => props.estilo ? 'line-through' : 'none'};
+
+`
