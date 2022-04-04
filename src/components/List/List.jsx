@@ -7,9 +7,8 @@ export const List = (props) => {
       {props.itemsList.map((item, index) => (
         <li key={index}>
           <input type="checkbox" id="checkBox" />
-          {item}
+          <span>{item}</span>
           <button type='button'>Delete</button>
-          <span></span>
         </li>
       ))}
     </S.Ul>

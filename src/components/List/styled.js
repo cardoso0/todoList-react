@@ -2,13 +2,7 @@ import styled from 'styled-components'
 
 export const Ul = styled.ul`
   display: block;
-  list-style-type: disc;
   margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-  paddin-inline-start: 40px;
-
 
   li {
     border-bottom: 1px solid #eaeaea;
