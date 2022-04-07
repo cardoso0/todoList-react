@@ -8,7 +8,6 @@ function App() {
   const [itemsList, setItemsList] = useState([])
 
   const handleAddItemToList = (newItem) => {
-    console.log(newItem)
     setItemsList([...itemsList, newItem])
   }
 
@@ -18,9 +17,12 @@ function App() {
       
       <Form 
         onAddItem={handleAddItemToList}
-      />
+        />
 
-      <List itemsList={itemsList} /> {/* passando o `itemList` como props para o componente */}
+      <List 
+        itemsList={itemsList}
+        setItemsList={setItemsList}
+      /> {/* passando o `itemList` como props para o componente */}
     </C.Main>
   )
 }

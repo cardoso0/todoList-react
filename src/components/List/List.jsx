@@ -1,7 +1,7 @@
-import { useState } from 'react'
+import React ,{ useState } from 'react'
 import * as S from './styled'
 
-export const List = (props) => {
+export const List = ({ itemsList, setItemsList }) => {
   const [check, setCheck] = useState()
 
   const handleCheckBox = event => {
@@ -9,17 +9,19 @@ export const List = (props) => {
     setCheck(checkedValue)
   }
 
-  const removeTask = (e) => {
-    console.log(e.target)
+  const handleRemoveTodo = todo => {
+    let newTodos = [...itemsList]
+    newTodos.splice(itemsList.indexOf(todo), 1)
+    setItemsList(newTodos)
   }
 
   return (
     <S.Ul>
-      {props.itemsList.map((item) => (
-        <li key={item.id}>
-          <input type="checkbox" id="checkBox" onChange={handleCheckBox}/>
-          <S.Span estilo={check}>{item.value}</S.Span>
-          <button type='button' onClick={removeTask}>Delete</button>
+      {itemsList.map((todo) => (
+        <li key={todo.id}>
+          <input type="checkbox" id="checkBox" onChange={handleCheckBox} />
+          <S.Span estilo={check}>{todo.value}</S.Span>
+          <button type='button' onClick={() => handleRemoveTodo(todo)}>Delete</button>
         </li>
       ))}
     </S.Ul>

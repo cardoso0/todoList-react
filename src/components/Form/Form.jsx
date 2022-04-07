@@ -5,9 +5,9 @@ export const Form = ({ onAddItem }) => {
 
   const [task, setTask] = useState('')
   const [id, setId] = useState(0)
+
   const handleChangeInput = event => {
     let inputTask = event.target.value
-
     setTask(inputTask)
   }
 
@@ -25,6 +25,10 @@ export const Form = ({ onAddItem }) => {
       setTask('')
     }
   }
+
+  // const removeTask = (id) => {
+  //   console.log(id)
+  // }
 
   return (
     <S.Form>
