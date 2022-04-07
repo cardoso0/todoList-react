@@ -15,10 +15,10 @@ export const List = (props) => {
 
   return (
     <S.Ul>
-      {props.itemsList.map((item, index) => (
+      {props.itemsList.map((item) => (
         <li key={item.id}>
           <input type="checkbox" id="checkBox" onChange={handleCheckBox}/>
-          <S.Span estilo={check}>{item.name}</S.Span>
+          <S.Span estilo={check}>{item.value}</S.Span>
           <button type='button' onClick={removeTask}>Delete</button>
         </li>
       ))}

@@ -4,7 +4,7 @@ import * as S from './styled'
 export const Form = ({ onAddItem }) => {
 
   const [task, setTask] = useState('')
-
+  const [id, setId] = useState(0)
   const handleChangeInput = event => {
     let inputTask = event.target.value
 
@@ -15,7 +15,12 @@ export const Form = ({ onAddItem }) => {
     event.preventDefault();
     
     if(task) {
-      onAddItem(task)
+      const newTask = {
+        id: id,
+        value: task
+      }
+      setId(id + 1)
+      onAddItem(newTask)
 
       setTask('')
     }
@@ -25,8 +30,8 @@ export const Form = ({ onAddItem }) => {
     <S.Form>
       <input 
         type="text" 
-        name="task" 
-        id="task" 
+        name="text" 
+        id="text" 
         className='input-text' 
         placeholder='Digite uma tarefa...'
         autoFocus
