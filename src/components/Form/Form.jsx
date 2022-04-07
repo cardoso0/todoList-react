@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import * as S from './styled'
 
-export const Form = ({ onAddItem }) => {
+export const Form = ({ onAddItem, itemsList }) => {
 
   const [task, setTask] = useState('')
-  const [id, setId] = useState(0)
 
   const handleChangeInput = event => {
     let inputTask = event.target.value
@@ -16,19 +15,16 @@ export const Form = ({ onAddItem }) => {
     
     if(task) {
       const newTask = {
-        id: id,
+        id: itemsList.length + 1,
         value: task
       }
-      setId(id + 1)
+  
       onAddItem(newTask)
 
       setTask('')
     }
+    console.log(itemsList)
   }
-
-  // const removeTask = (id) => {
-  //   console.log(id)
-  // }
 
   return (
     <S.Form>

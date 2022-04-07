@@ -7,6 +7,7 @@ export const List = ({ itemsList, setItemsList }) => {
   const handleCheckBox = event => {
     let checkedValue = event.target.checked
     setCheck(checkedValue)
+    console.log(check)
   }
 
   const handleRemoveTodo = todo => {

@@ -17,6 +17,7 @@ function App() {
       
       <Form 
         onAddItem={handleAddItemToList}
+        itemsList={itemsList}
         />
 
       <List 
