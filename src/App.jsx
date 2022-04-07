@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import * as C from './AppStyled'
+import * as S from './AppStyled'
 import { Form } from './components/Form/Form'
 import { List } from './components/List/List'
 
@@ -12,7 +12,7 @@ function App() {
   }
 
   return (
-    <C.Main>
+    <S.Main>
       <h1>todos</h1>
       
       <Form 
@@ -24,7 +24,7 @@ function App() {
         itemsList={itemsList}
         setItemsList={setItemsList}
       /> {/* passando o `itemList` como props para o componente */}
-    </C.Main>
+    </S.Main>
   )
 }
 

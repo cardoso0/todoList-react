@@ -16,14 +16,14 @@ export const Form = ({ onAddItem, itemsList }) => {
     if(task) {
       const newTask = {
         id: itemsList.length + 1,
-        value: task
+        value: task,
+        done: false
       }
   
       onAddItem(newTask)
 
       setTask('')
     }
-    console.log(itemsList)
   }
 
   return (
