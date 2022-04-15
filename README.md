@@ -29,7 +29,7 @@ $ npm run dev
 As seguintes ferramentas foram usadas na construção do projeto:
 
 - [HTML](https://www.w3schools.com/html/)
-- [CSS with Styled Components](https://styled-components.com/)
+- [CSS com Styled Components](https://styled-components.com/)
 - [React](https://pt-br.reactjs.org/)
 
 ### Autor
